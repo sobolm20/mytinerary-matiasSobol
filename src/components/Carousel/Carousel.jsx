@@ -1,52 +1,49 @@
-import React, {useState} from "react";
-import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from "react-icons/bs"
+import React from "react";
+import Carousel from "better-react-carousel";
 import './Carousel.css';
+import cities from './citiesnight.json'
 
 
-const CarouselC = ({ citiesnight }) => {
-  const [image, setImage] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setImage(selectedIndex);
-  };
-
-  const nextImage = () => {
-    setImage(image === citiesnight.length - 1 ? 0 : image + 1)};
-
-  const prevImage = () => {
-    setImage(image === 0 ? citiesnight.length - 1 : image - 1)};
-
-return (
-    <div activeIndex={image} onSelect={handleSelect}>
-      <div className="caja">
-        <div className="carrousel">
-        <BsArrowLeftCircleFill className="arrow arrow-letf" onClick={prevImage} />
-        <BsArrowRightCircleFill className="arrow arrow-right" onClick={nextImage}/>
-        <div className="carrousel_card">
-        {citiesnight.map((images, index)=>{
-          return (
-          <div key={index} 
-          className={image === index ? "slide" : "slide slide-hidden"}>
-            <img  className="card_image" src={images.image} alt={images.city} />
-            <div className="card_overlay">
-              <h2 className="card_title">{images.city}" - "{images.country}</h2>
-            </div>
-            
-          </div>
-          )
-        })};
-        </div>
-        
-      <span className="indicator">
-        {citiesnight.map((_, index)=>{
-        return <button key={index} onClick={null} className={image ===index ? "indice" : "indice indice-inactive"}></button>
-        })}
-      </span>
-      </div>
-    </div>         
-    </div>
-  );
+const Galery = () => {
+  return (
+    <Carousel cols={2} rows={2} gap={10} loop>
+      <Carousel.Item>
+          {cities.map((image, Index) => {
+            return
+            <div key={Index}>
+                <img src={cities.image} alt={cities.city}/>
+                <h1>{cities.city}</h1>
+                <h2>{cities.country}</h2>
+            </div>})
+          }  
+      </Carousel.Item>
+    </Carousel>
+  )
 }
 
+export default Galery 
 
-export default CarouselC 
+
+    // <div className="contenedor">
+    //   <div className="ciudad">
+       
+
+    //   </div>
+    // </div>
+  
+
+  
+
+  //const [image, setImage] = useState(0);
+  // {cities.map((cities, index)=>{
+  //   return (
+  //   <div key={index} 
+  //   className={image === index ? "slide" : "slide slide-hidden"}>
+  //     <img  className="card_image" src={cities.image} alt={cities.city} />
+  //     <div>
+  //       <h2 className="card_title">{cities.city}" - "{cities.country}</h2>
+  //     </div>
+      
+  //   </div>
+  //   )
+  // })}

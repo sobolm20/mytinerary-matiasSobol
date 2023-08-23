@@ -3,9 +3,22 @@
   margin: 0;
   box-sizing: border-box;
 }
-
  
-.box {
-display: flex;
-justify-content: end;
+.principal {
+  height: 100vh;
+  margin: 1 rem;
+  padding: 0,5 rem;
+  border-radius: 0.375 rem;
+}
+
+.principal contenido {
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+}
+
+.principal ilustracion {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
 }

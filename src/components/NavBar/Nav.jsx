@@ -6,11 +6,10 @@ const NavBar = () => {
     return(
         <nav className="header-menu">
             <ul>
-                <li><a href="Link1.html">Home</a> </li>
-                <li><a href="Link2.html">Cities</a></li>
-                <li><a href="Link3.html">Login</a></li>
-            </ul>
-                
+                <li><a href="">Home</a></li>
+                <li><a href="">Cities</a></li>
+                <li><a href="">Login</a></li>
+            </ul>     
         </nav>
     )
 }

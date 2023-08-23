@@ -1,6 +1,6 @@
 import React from "react";
 import './Footer.css';
-import "bootstrap-icons/icons/youtube.svg"
+
 
 const Footer = () => {
     return(

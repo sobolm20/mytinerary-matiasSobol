@@ -2,9 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header/Header'
 import NavBar from './components/NavBar/Nav'
-import { Images } from './components/Carousel/citiesnight.json'
-import CarouselC from './components/Carousel/Carousel'
+import Galery from './components/Carousel/Carousel'
 import Footer from './components/Footer/Footer'
+
 
 
 
@@ -18,11 +18,14 @@ function App() {
         <NavBar />
         
       </header>
-      <main className='h-[80vh] p-2 rounded-md m-4'>
+      <main className='principal'>
         <h2 className="text-green-500 text-xl font-semibold flex justify-start items-end">Find your perfect trip, designed by insiders who know and love their cities!</h2>
-      <section className='box'>
-        <CarouselC citiesnight={Images} />
-      </section>
+        <aside className='contentido'>
+
+        </aside>
+        <section className='ilustracion'>
+      
+        </section>
       </main>
       <footer className="card">
         <Footer />
@@ -32,3 +35,7 @@ function App() {
 }
   
 export default App
+
+//import { Images } from './components/Carousel/citiesnight.json'
+//import Carousel from './components/Carousel/Carousel'
+
