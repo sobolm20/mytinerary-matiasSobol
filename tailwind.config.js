@@ -4,8 +4,6 @@ module.exports = {
   content: [
     './pages/**/*.{html,js}',
     './components/**/*.{html,js}',
-  ],
-  purge: [
     './src/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {

@@ -3,40 +3,21 @@
     justify-content: flex-end;
     align-items: start;
     text-decoration: none;
+    padding: 8px;
     margin: 0.5rem 0 0.5rem 1rem;
 }
 
-.header-menu ul {
+.header-menu NavLink {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    border: 1px solid transparent;
+    margin: 0 0.5rem 0;
 } 
 
-.header-menu ul li a {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    list-style-type: none;
-    padding: 8px;
-    background-color: rgb(98, 98, 97);
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    margin: 0 0.5rem 0;
-}
-
-.header-menu ul li a:hover{
+/* .header-menu ul li a:hover{
     color: rgb(203, 229, 8);
-}
-
-.header-menu ul li a:active{
-    color: rgb(98, 202, 37);
-}
-
-.header-menu ul li a:link{
-    color: rgb(99, 208, 16);
-}
+} */
 
 .activo{
     color: rgb(203, 229, 8);
