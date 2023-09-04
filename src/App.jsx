@@ -8,21 +8,12 @@ import CityDetails from './pages/CityDetails';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Main />,
     Children: [
-      {
-        path: '/',
-        element: <Home />
-      },
-      {
-        path: '/cities',
-        element: <Cities />
-      },
-      {
-        path: '/cities/:id',
-        element: <CityDetails />
-      },
+      { path: '/', element: <Home /> },
+      { path: '/cities', element: <Cities /> },
+      { path: '/cities/:id', element: <CityDetails /> },
     ],
   },
 ]);
